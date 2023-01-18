@@ -1,5 +1,4 @@
-const Cadastro = require('../models/CadastroModel');
-const Login = require('../models/CadastroModel');
+const Login = require('../models/LoginModel');
 
 exports.cadastro = (req, res) => {
     res.render('cadastro');
@@ -11,11 +10,11 @@ exports.index = (req, res) => {
 
 exports.register = async (req, res) => {
     try {
-        const cadastro = new Cadastro(req.body);
-        await cadastro.register();
+        const login = new Login(req.body);
+        await login.register();
 
-        if(cadastro.errors.length > 0) {
-            req.flash('errors', cadastro.errors);
+        if(login.errors.length > 0) {
+            req.flash('errors', login.errors);
             req.session.save(() => {
                 return res.redirect('index');
             });
@@ -35,7 +34,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     try {
         const login = new Login(req.body);
-        await login.login;
+        await login.login();
 
         if(login.errors.length > 0) {
             req.flash('errors', login.errors);

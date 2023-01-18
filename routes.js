@@ -2,15 +2,15 @@ const express = require('express');
 const route = express.Router();
 
 const homeController = require('./src/controllers/homeController');
-const cadastroController = require('./src/controllers/cadastroController');
+const loginController = require('./src/controllers/loginController');
 
 // Rotas da home
 route.get('/', homeController.index);
 
 // Rotas de Login
-route.get('/login/index', cadastroController.index);
-route.get('/cadastro/index', cadastroController.cadastro);
-route.post('/cadastro/register', cadastroController.register);
-// route.post('/login/login', cadastroController.login);
+route.get('/login/index', loginController.index);
+route.get('/cadastro/index', loginController.cadastro);
+route.post('/cadastro/register', loginController.register);
+route.post('/login/login', loginController.login);
 
 module.exports = route;
