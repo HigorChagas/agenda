@@ -12,5 +12,7 @@ route.get('/login/index', loginController.index);
 route.get('/cadastro/index', loginController.cadastro);
 route.post('/cadastro/register', loginController.register);
 route.post('/login/login', loginController.login);
+route.post('/login/logout', loginController.logout)
+route.get('/login/logout', loginController.logout);
 
 module.exports = route;
