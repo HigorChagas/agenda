@@ -1,10 +1,44 @@
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 a {
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.description {
+    text-align: center;
+    font-weight:300;
+    font-size: 18px;
+}
+
+.formulario {
+    height: auto;
+    border: 1px solid rgba(42, 42, 73, 0.9);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-submit {
+    height: 2.5rem;
+    font-size: 1.1rem;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(151, 134, 206);
+    color: #fff;
+    transition: 500ms;
+}
+
+.btn-submit:hover {
+    background-color: rgb(92, 65, 182);
+    transition: 500ms;
 }
