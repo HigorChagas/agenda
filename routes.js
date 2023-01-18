@@ -8,8 +8,8 @@ const cadastroController = require('./src/controllers/cadastroController');
 route.get('/', homeController.index);
 
 // Rotas de Login
-route.get('/login/index', cadastroController.login);
-route.get('/cadastro/index', cadastroController.index);
+route.get('/login/index', cadastroController.index);
+route.get('/cadastro/index', cadastroController.cadastro);
 route.post('/cadastro/register', cadastroController.register);
 // route.post('/login/login', cadastroController.login);
 

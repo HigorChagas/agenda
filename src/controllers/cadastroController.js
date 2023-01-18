@@ -1,9 +1,13 @@
 const Cadastro = require('../models/CadastroModel');
 const Login = require('../models/CadastroModel');
 
-exports.index = (req, res) => {
+exports.cadastro = (req, res) => {
     res.render('cadastro');
 };
+
+exports.index = (req, res) => {
+    res.render('login');
+}
 
 exports.register = async (req, res) => {
     try {
