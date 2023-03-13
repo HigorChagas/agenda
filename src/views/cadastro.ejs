@@ -1,5 +1,4 @@
-<%- include('includes/head'); %>
-<%- include('includes/nav'); %>
+<%- include('includes/head'); %> <%- include('includes/nav'); %>
 
 <div class="container">
     <div class="row">
@@ -7,17 +6,37 @@
 
         <div class="col-lg-8 my-5">
             <form class="form-signin" action="/cadastro/register" method="POST">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <h1 class="h3 mb-3 font-weight-normal text-center my-5">Faça seu cadastro abaixo</h1>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                <h1 class="h3 mb-3 font-weight-normal text-center my-5">
+                    Faça seu cadastro abaixo
+                </h1>
                 <%- include('includes/messages'); %>
                 <label for="inputEmail" class="sr-only">E-mail</label>
-                <input type="email" id="inputEmail" class="form-control mb-4 col-lg-6 mx-auto" name="email" placeholder="Email" autofocus="">
-                <label for="inputPassword" class="sr-only col-lg-4">Senha</label>
-                <input type="password" name="password" class="form-control col-lg-6 mx-auto" placeholder="Senha">
-                <div class="checkbox mb-3">
-                </div>
-                <button class="btn btn-lg btn-outline-success btn-block col-lg-6 mx-auto" type="submit">Cadastrar</button>
-              </form>
+                <input
+                    type="email"
+                    id="inputEmail"
+                    class="form-control mb-4 col-lg-6 mx-auto"
+                    name="email"
+                    placeholder="Email"
+                    autofocus=""
+                />
+                <label for="inputPassword" class="sr-only col-lg-4"
+                    >Senha</label
+                >
+                <input
+                    type="password"
+                    name="password"
+                    class="form-control col-lg-6 mx-auto"
+                    placeholder="Senha"
+                />
+                <div class="checkbox mb-3"></div>
+                <button
+                    class="btn btn-lg btn-outline-success btn-block col-lg-6 mx-auto"
+                    type="submit"
+                >
+                    Cadastrar
+                </button>
+            </form>
         </div>
 
         <div class="col-lg-2"></div>
